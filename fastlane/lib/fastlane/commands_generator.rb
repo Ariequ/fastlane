@@ -152,7 +152,7 @@ module Fastlane
         c.syntax = 'fastlane start_server'
         c.description = 'Starts local socket server and enables only a single local connection'
         c.option '-s', '--stay_alive', 'Keeps socket server up even after error or disconnects, requires CTRL-C to kill.'
-        c.option '-t seconds', '--connection_timeout', 'Sets connection established timeout'
+        c.option '-c seconds', '--connection_timeout', 'Sets connection established timeout'
         c.action do |args, options|
           default_connection_timeout = 5
           stay_alive = options.stay_alive || false
